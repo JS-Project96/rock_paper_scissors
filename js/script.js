@@ -28,8 +28,20 @@ function compareChoices(usersChoice, computersChoice) {
         return "Scissors beats paper, computer wins!";
     } else if (usersChoice === "scissors" && computersChoice === "paper"){
         return "Scissors beats paper, you win!";
-    }
+    } else if (usersChoice === "rock" && computersChoice === "paper"){
+        return "Paper beats rock, computer wins!";
+    } else if (usersChoice === "paper" && computersChoice === "rock") {
+        return "Paper beats rock, you win!";
+    };
 };
 // ask user if they would like to play again
 
 // game put together
+function rock_paper_scissors() {
+    let computersChoice = getComputerChoice();
+    let usersChoice = getUsersChoice();
+    let result = compareChoices(usersChoice, computersChoice);
+    console.log(usersChoice);
+    console.log(computersChoice);
+    return result;
+};
