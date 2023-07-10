@@ -16,6 +16,20 @@ function getUsersChoice() {
         };
     };
 };
-// compare computer and users choice
-// declare the result
+// compare computer and users choice & declare result
+function compareChoices(usersChoice, computersChoice) {
+    if (usersChoice === computersChoice) {
+        return "Its a draw!"
+    } else if (usersChoice === "rock" && computersChoice === "scissors"){
+        return "Rock beats scissors! You win!";
+    } else if (usersChoice === "scissors" && getComputerChoice === "rock"){
+        return "Rock beats scissors, computer wins!";
+    } else if (usersChoice === "paper" && computersChoice === "scissors"){
+        return "Scissors beats paper, computer wins!";
+    } else if (usersChoice === "scissors" && computersChoice === "paper"){
+        return "Scissors beats paper, you win!";
+    }
+};
 // ask user if they would like to play again
+
+// game put together
