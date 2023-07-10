@@ -34,14 +34,25 @@ function compareChoices(usersChoice, computersChoice) {
         return "Paper beats rock, you win!";
     };
 };
-// ask user if they would like to play again
 
 // game put together
 function rock_paper_scissors() {
     let computersChoice = getComputerChoice();
     let usersChoice = getUsersChoice();
     let result = compareChoices(usersChoice, computersChoice);
-    console.log(usersChoice);
-    console.log(computersChoice);
     return result;
+};
+
+// ask the user if they want to play again
+function play_again() {
+    let answer = prompt("Would you like to play again? enter 'y' or 'n': ").toLowerCase();
+    while (true){
+        if (answer === "y") {
+            rock_paper_scissors();
+        } else if (answer === "n") {
+            break;
+        } else {
+            result = prompt("Please enter a valid response. enter 'y' or 'n': ").toLowerCase();
+        };
+    };
 };
