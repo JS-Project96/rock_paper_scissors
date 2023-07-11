@@ -47,7 +47,6 @@ function rockPaperScissors() {
 function playAgain() {
     while (true){
         let answer = prompt("Would you like to play again? enter 'y' or 'n': ").toLowerCase();
-        console.log(answer);
         if (answer === "y") {
             console.log(rockPaperScissors());
         } else if (answer === "n") {
@@ -64,3 +63,5 @@ function mainGame() {
     console.log(rockPaperScissors());
     playAgain();
 };
+
+mainGame();
