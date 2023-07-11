@@ -36,7 +36,7 @@ function compareChoices(usersChoice, computersChoice) {
 };
 
 // game put together
-function rock_paper_scissors() {
+function rockPaperScissors() {
     let computersChoice = getComputerChoice();
     let usersChoice = getUsersChoice();
     let result = compareChoices(usersChoice, computersChoice);
@@ -44,15 +44,23 @@ function rock_paper_scissors() {
 };
 
 // ask the user if they want to play again
-function play_again() {
-    let answer = prompt("Would you like to play again? enter 'y' or 'n': ").toLowerCase();
+function playAgain() {
     while (true){
+        let answer = prompt("Would you like to play again? enter 'y' or 'n': ").toLowerCase();
+        console.log(answer);
         if (answer === "y") {
-            rock_paper_scissors();
+            console.log(rockPaperScissors());
         } else if (answer === "n") {
             break;
         } else {
-            result = prompt("Please enter a valid response. enter 'y' or 'n': ").toLowerCase();
+            answer = prompt("Please enter a valid response. enter 'y' or 'n': ").toLowerCase();
         };
     };
+};
+
+// program put together
+
+function mainGame() {
+    console.log(rockPaperScissors());
+    playAgain();
 };
