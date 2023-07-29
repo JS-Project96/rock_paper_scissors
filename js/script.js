@@ -5,18 +5,6 @@ function getComputerChoice() {
     return choices[choice];
 };
 
-// get users choice
-function getUsersChoice() {
-    let choice = prompt("Enter rock, paper or scissors: ").toLowerCase(); // to lower case makes comparison easier
-    while (true) {
-        if (choice === "rock" || choice === "paper" || choice === "scissors"){
-            return choice;
-        } else {
-            choice = prompt("Please enter a valid input. rock, paper or scissors: ").toLowerCase();
-        };
-    };
-};
-// compare computer and users choice & declare result
 function compareChoices(usersChoice, computersChoice) {
     if (usersChoice === computersChoice) {
         return "Its a draw!"
@@ -35,33 +23,27 @@ function compareChoices(usersChoice, computersChoice) {
     };
 };
 
-// game put together
-function rockPaperScissors() {
+// 1 round of RPS
+function rockPaperScissors(usersChoice) {
     let computersChoice = getComputerChoice();
-    let usersChoice = getUsersChoice();
     let result = compareChoices(usersChoice, computersChoice);
+    console.log(computersChoice);
+    console.log(usersChoice);
     return result;
 };
 
-// ask the user if they want to play again
-function playAgain() {
-    while (true){
-        let answer = prompt("Would you like to play again? enter 'y' or 'n': ").toLowerCase();
-        if (answer === "y") {
-            console.log(rockPaperScissors());
-        } else if (answer === "n") {
-            break;
-        } else {
-            answer = prompt("Please enter a valid response. enter 'y' or 'n': ").toLowerCase();
-        };
-    };
-};
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
 
-// program put together
+rock.addEventListener('click', () => {
+    console.log(rockPaperScissors("rock"));
+});
 
-function mainGame() {
-    console.log(rockPaperScissors());
-    playAgain();
-};
+paper.addEventListener('click', () => {
+    console.log(rockPaperScissors("paper"));
+});
 
-mainGame();
+scissors.addEventListener('click', () => {
+   console.log(rockPaperScissors("scissors"));
+});
