@@ -5,10 +5,10 @@ let computerScore = 0
 
 function checkScore() {
     if (userScore == 5){
-        resultDiv.textContent = "You won the race to 5 points, you win!";
+        resultDiv.textContent = "You won the race to 5 points! Click an image to play again!";
         restartGame();
     } else if (computerScore == 5) {
-        resultDiv.textContent = "Computer won the race to 5 points, you lose!";
+        resultDiv.textContent = "Computer won the race to 5 points! Click an image to play again!";
         restartGame();
     };
 };
