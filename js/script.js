@@ -79,14 +79,14 @@ const userScoreDiv = document.querySelector('.usersScore');
 const computerScoreDiv = document.querySelector('.computersScore');
 
 rock.addEventListener('click', () => {
-    (rockPaperScissors("rock"));
+    rockPaperScissors("rock");
 });
 
 paper.addEventListener('click', () => {
-    (rockPaperScissors("paper"));
+    rockPaperScissors("paper");
 });
 
 scissors.addEventListener('click', () => {
-   (rockPaperScissors("scissors"));
+   rockPaperScissors("scissors");
 });
 
