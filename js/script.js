@@ -1,6 +1,7 @@
+// Game
 
-let usersScore = 0
-let computersScore = 0
+let userScore = 0
+let computerScore = 0
 
 // get computers choice
 function getComputerChoice() {
@@ -11,25 +12,31 @@ function getComputerChoice() {
 
 function compareChoices(usersChoice, computersChoice, usersScore, computersScore) {
     if (usersChoice === computersChoice) {
-        return "Its a draw!"
+        resultDiv.textContent = "Its a draw!";
     } else if (usersChoice === "rock" && computersChoice === "scissors"){
-        usersScore++;
-        return "Rock beats scissors! You win!";
+        userScore++;
+        userScoreDiv.textContent = userScore;
+        resultDiv.textContent = "Rock beats scissors! You win!";
     } else if (usersChoice === "scissors" && computersChoice === "rock"){
-        computersScore++;
-        return "Rock beats scissors, computer wins!";
+        computerScore++;
+        computerScoreDiv.textContent = computerScore;
+        resultDiv.textContent = "Rock beats scissors, computer wins!";
     } else if (usersChoice === "paper" && computersChoice === "scissors"){
-        computersScore++;
-        return "Scissors beats paper, computer wins!";
+        computerScore++;
+        computerScoreDiv.textContent = computerScore;
+        resultDiv.textContent = "Scissors beats paper, computer wins!";
     } else if (usersChoice === "scissors" && computersChoice === "paper"){
-        usersScore++;
-        return "Scissors beats paper, you win!";
+        userScore++;
+        userScoreDiv.textContent = userScore;
+        resultDiv.textContent = "Scissors beats paper, you win!";
     } else if (usersChoice === "rock" && computersChoice === "paper"){
-        computersScore++;
-        return "Paper beats rock, computer wins!";
+        computerScore++;
+        computerScoreDiv.textContent = computerScore;
+        resultDiv.textContent = "Paper beats rock, computer wins!";
     } else if (usersChoice === "paper" && computersChoice === "rock") {
-        usersScore++;
-        return "Paper beats rock, you win!";
+        userScore++;
+        userScoreDiv.textContent = userScore;
+        resultDiv.textContent = "Paper beats rock, you win!";
     };
 };
 
@@ -40,18 +47,24 @@ function rockPaperScissors(usersChoice) {
     return result;
 };
 
+// UI
+
 const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissors = document.querySelector('.scissors');
+const resultDiv = document.querySelector('.result');
+const userScoreDiv = document.querySelector('.usersScore');
+const computerScoreDiv = document.querySelector('.computersScore');
 
 rock.addEventListener('click', () => {
-    console.log(rockPaperScissors("rock"));
+    (rockPaperScissors("rock"));
 });
 
 paper.addEventListener('click', () => {
-    console.log(rockPaperScissors("paper"));
+    (rockPaperScissors("paper"));
 });
 
 scissors.addEventListener('click', () => {
-   console.log(rockPaperScissors("scissors"));
+   (rockPaperScissors("scissors"));
 });
+
