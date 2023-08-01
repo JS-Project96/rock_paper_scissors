@@ -1,6 +1,18 @@
 #choice_button {
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
     font-size: 200px;
-};
+    margin: 50px 10px;
+}
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
