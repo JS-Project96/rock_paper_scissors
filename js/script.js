@@ -31,32 +31,32 @@ function compareChoices(usersChoice, computersChoice, usersScore, computersScore
         resultDiv.textContent = "Its a draw!";
     } else if (usersChoice === "rock" && computersChoice === "scissors"){
         userScore++;
-        userScoreDiv.textContent = userScore;
+        userScoreDiv.textContent = `Users Score : ${userScore}`;
         resultDiv.textContent = "Rock beats scissors! You win!";
         checkScore();
     } else if (usersChoice === "scissors" && computersChoice === "rock"){
         computerScore++;
-        computerScoreDiv.textContent = computerScore;
+        computerScoreDiv.textContent = `Computers Score : ${computerScore}`;
         resultDiv.textContent = "Rock beats scissors, computer wins!";
         checkScore();
     } else if (usersChoice === "paper" && computersChoice === "scissors"){
         computerScore++;
-        computerScoreDiv.textContent = computerScore;
+        computerScoreDiv.textContent = `Computers Score : ${computerScore}`;
         resultDiv.textContent = "Scissors beats paper, computer wins!";
         checkScore();
     } else if (usersChoice === "scissors" && computersChoice === "paper"){
         userScore++;
-        userScoreDiv.textContent = userScore;
+        userScoreDiv.textContent = `Users Score : ${userScore}`;
         resultDiv.textContent = "Scissors beats paper, you win!";
         checkScore();
     } else if (usersChoice === "rock" && computersChoice === "paper"){
         computerScore++;
-        computerScoreDiv.textContent = computerScore;
+        computerScoreDiv.textContent = `Computers Score : ${computerScore}`;
         resultDiv.textContent = "Paper beats rock, computer wins!";
         checkScore();
     } else if (usersChoice === "paper" && computersChoice === "rock") {
         userScore++;
-        userScoreDiv.textContent = userScore;
+        userScoreDiv.textContent = `Users Score : ${userScore}`;
         resultDiv.textContent = "Paper beats rock, you win!";
         checkScore();
     };
