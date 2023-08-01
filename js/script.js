@@ -1,3 +1,7 @@
+
+let usersScore = 0
+let computersScore = 0
+
 // get computers choice
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
@@ -5,20 +9,26 @@ function getComputerChoice() {
     return choices[choice];
 };
 
-function compareChoices(usersChoice, computersChoice) {
+function compareChoices(usersChoice, computersChoice, usersScore, computersScore) {
     if (usersChoice === computersChoice) {
         return "Its a draw!"
     } else if (usersChoice === "rock" && computersChoice === "scissors"){
+        usersScore++;
         return "Rock beats scissors! You win!";
-    } else if (usersChoice === "scissors" && getComputerChoice === "rock"){
+    } else if (usersChoice === "scissors" && computersChoice === "rock"){
+        computersScore++;
         return "Rock beats scissors, computer wins!";
     } else if (usersChoice === "paper" && computersChoice === "scissors"){
+        computersScore++;
         return "Scissors beats paper, computer wins!";
     } else if (usersChoice === "scissors" && computersChoice === "paper"){
+        usersScore++;
         return "Scissors beats paper, you win!";
     } else if (usersChoice === "rock" && computersChoice === "paper"){
+        computersScore++;
         return "Paper beats rock, computer wins!";
     } else if (usersChoice === "paper" && computersChoice === "rock") {
+        usersScore++;
         return "Paper beats rock, you win!";
     };
 };
@@ -27,8 +37,6 @@ function compareChoices(usersChoice, computersChoice) {
 function rockPaperScissors(usersChoice) {
     let computersChoice = getComputerChoice();
     let result = compareChoices(usersChoice, computersChoice);
-    console.log(computersChoice);
-    console.log(usersChoice);
     return result;
 };
 
