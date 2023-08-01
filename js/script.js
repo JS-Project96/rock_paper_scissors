@@ -3,6 +3,22 @@
 let userScore = 0
 let computerScore = 0
 
+function checkScore() {
+    if (userScore == 5){
+        resultDiv.textContent = "You won the race to 5 points, you win!";
+        restartGame();
+    } else if (computerScore == 5) {
+        resultDiv.textContent = "Computer won the race to 5 points, you lose!";
+        restartGame();
+    };
+};
+
+function restartGame() {
+    userScore = 0;
+    computerScore = 0;
+    userScoreDiv.textContent = userScore;
+    computerScoreDiv.textContent = computerScore;
+};
 // get computers choice
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"];
@@ -17,26 +33,32 @@ function compareChoices(usersChoice, computersChoice, usersScore, computersScore
         userScore++;
         userScoreDiv.textContent = userScore;
         resultDiv.textContent = "Rock beats scissors! You win!";
+        checkScore();
     } else if (usersChoice === "scissors" && computersChoice === "rock"){
         computerScore++;
         computerScoreDiv.textContent = computerScore;
         resultDiv.textContent = "Rock beats scissors, computer wins!";
+        checkScore();
     } else if (usersChoice === "paper" && computersChoice === "scissors"){
         computerScore++;
         computerScoreDiv.textContent = computerScore;
         resultDiv.textContent = "Scissors beats paper, computer wins!";
+        checkScore();
     } else if (usersChoice === "scissors" && computersChoice === "paper"){
         userScore++;
         userScoreDiv.textContent = userScore;
         resultDiv.textContent = "Scissors beats paper, you win!";
+        checkScore();
     } else if (usersChoice === "rock" && computersChoice === "paper"){
         computerScore++;
         computerScoreDiv.textContent = computerScore;
         resultDiv.textContent = "Paper beats rock, computer wins!";
+        checkScore();
     } else if (usersChoice === "paper" && computersChoice === "rock") {
         userScore++;
         userScoreDiv.textContent = userScore;
         resultDiv.textContent = "Paper beats rock, you win!";
+        checkScore();
     };
 };
 
