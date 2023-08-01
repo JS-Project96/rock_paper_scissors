@@ -16,8 +16,8 @@ function checkScore() {
 function restartGame() {
     userScore = 0;
     computerScore = 0;
-    userScoreDiv.textContent = userScore;
-    computerScoreDiv.textContent = computerScore;
+    userScoreDiv.textContent = `Users Score : ${userScore}`;
+    computerScoreDiv.textContent = `Computers Score : ${computerScore}`;
 };
 // get computers choice
 function getComputerChoice() {
