@@ -27,6 +27,15 @@ body {
     justify-content: center;
 }
 
+.choice_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    font-size: 40px;
+}
+
 .score {
     text-align: center;
 }

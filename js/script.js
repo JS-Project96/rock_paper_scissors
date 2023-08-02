@@ -67,11 +67,11 @@ function rockPaperScissors(usersChoice) {
     let computersChoice = getComputerChoice();
     let result = compareChoices(usersChoice, computersChoice);
     if (computersChoice == "rock"){
-        computersChoiceDiv.textContent = "\u270A"
+        computersChoiceDiv.textContent = "Computers choice: \u270A"
     } else if (computersChoice == "paper") {
-        computersChoiceDiv.textContent = "\u270B"
+        computersChoiceDiv.textContent = "Computers choice: \u270B"
     } else {
-        computersChoiceDiv.textContent = "\u270C"
+        computersChoiceDiv.textContent = "Computers choice: \u270C"
     };
     return result;
 };
@@ -89,16 +89,16 @@ const computersChoiceDiv = document.querySelector('.computersChoice');
 
 rock.addEventListener('click', () => {
     rockPaperScissors("rock");
-    usersChoiceDiv.textContent = "\u270A";
+    usersChoiceDiv.textContent = "Your choice: \u270A";
 });
 
 paper.addEventListener('click', () => {
     rockPaperScissors("paper");
-    usersChoiceDiv.textContent = "\u270B";
+    usersChoiceDiv.textContent = "Your choice: \u270B";
 });
 
 scissors.addEventListener('click', () => {
    rockPaperScissors("scissors");
-   usersChoiceDiv.textContent = "\u270C";
+   usersChoiceDiv.textContent = "Your choice: \u270C";
 });
 
