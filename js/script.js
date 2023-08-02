@@ -26,7 +26,7 @@ function getComputerChoice() {
     return choices[choice];
 };
 
-function compareChoices(usersChoice, computersChoice, usersScore, computersScore) {
+function compareChoices(usersChoice, computersChoice) {
     if (usersChoice === computersChoice) {
         resultDiv.textContent = "Its a draw!";
     } else if (usersChoice === "rock" && computersChoice === "scissors"){
