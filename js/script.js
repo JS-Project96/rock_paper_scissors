@@ -66,6 +66,13 @@ function compareChoices(usersChoice, computersChoice, usersScore, computersScore
 function rockPaperScissors(usersChoice) {
     let computersChoice = getComputerChoice();
     let result = compareChoices(usersChoice, computersChoice);
+    if (computersChoice == "rock"){
+        computersChoiceDiv.textContent = "\u270A"
+    } else if (computersChoice == "paper") {
+        computersChoiceDiv.textContent = "\u270B"
+    } else {
+        computersChoiceDiv.textContent = "\u270C"
+    };
     return result;
 };
 
@@ -77,16 +84,21 @@ const scissors = document.querySelector('.scissors');
 const resultDiv = document.querySelector('.result');
 const userScoreDiv = document.querySelector('.usersScore');
 const computerScoreDiv = document.querySelector('.computersScore');
+const usersChoiceDiv = document.querySelector('.usersChoice');
+const computersChoiceDiv = document.querySelector('.computersChoice');
 
 rock.addEventListener('click', () => {
     rockPaperScissors("rock");
+    usersChoiceDiv.textContent = "\u270A";
 });
 
 paper.addEventListener('click', () => {
     rockPaperScissors("paper");
+    usersChoiceDiv.textContent = "\u270B";
 });
 
 scissors.addEventListener('click', () => {
    rockPaperScissors("scissors");
+   usersChoiceDiv.textContent = "\u270C";
 });
 
