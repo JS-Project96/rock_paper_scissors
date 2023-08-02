@@ -3,6 +3,7 @@ body {
     color: #fffacd;
     margin: 0;
     font-family: 'Caveat', cursive;
+    font-size: 25px;
 }
 
 
@@ -23,6 +24,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.container h1 {
+    font-size: 60px;
+}
+
+.container h2 {
+    font-size: 35px;
 }
 
 .button_container {
